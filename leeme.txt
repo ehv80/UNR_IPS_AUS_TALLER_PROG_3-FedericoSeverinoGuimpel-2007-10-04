@@ -1,0 +1,44 @@
+23/10/2007
+
+Este es un ejemplo de co´mo utilizar un servlet para acceder a un base de datos. 
+No es un proyecto de Eclipse (fue realizado con el Notepad++)  y es una modificacio´n 
+de un ejemplo del Deitel & Deitel (Cap. 24, en el ejemplo del libro utiliza CloudScape y 
+no MySQL).
+
+Para hacer funcionar este ejemplo seguir los siguientes pasos:
+
+1.	Iniciar Mysql y crear una base de datos llamada servlet , 
+	tendra una  tabla que se llamara encuesta.
+2.	Las columnas de encuesta sera´n 2, la primera llamada so(Varchar 15) 
+	y la segunda valor(int 5).
+3.	Luego de esto, agregamos los siguientes valores:
+
+	INSERT INTO encuesta VALUES('Windows Vista',0);
+	INSERT INTO encuesta VALUES('Windows XP',0);
+	INSERT INTO encuesta VALUES('Windows 2000',0);
+	INSERT INTO encuesta VALUES('Mac OS X',0);
+	INSERT INTO encuesta VALUES('Mac OS',0);
+	INSERT INTO encuesta VALUES('Debian GNU',0);
+	INSERT INTO encuesta VALUES('Fedora Linux',0);
+	INSERT INTO encuesta VALUES('Suse Linux',0);
+	INSERT INTO encuesta VALUES('FreeBSD',0);
+	INSERT INTO encuesta VALUES('OpenBSD',0);
+	INSERT INTO encuesta VALUES('Solaris',0);
+	INSERT INTO encuesta VALUES('cz',0);
+
+4.	Una vez creado dejamos corriendo la base de datos.
+5.	Copiar esta estructura de carpetas (la del zip) dentro del directorio donde 
+	tenemos instalado Tomcat, en mi caso es 
+	C:\Archivos de programa\Apache Software Foundation\Tomcat 5.5\webapps\encuesta
+6.	Iniciar el Tomcat desde Inicio-Programas-Apache Tomcat 5.5-Monitor Tomcat
+7.	Cualquier modificación que hagamos a los archivos ( sea web.xml, servEncuesta.java o 
+	cualquier otro dentro del subdirectorio “encuesta” , tendremos que reiniciar el servidor Tomcat.
+8.	Si todo fue realizado al pie de la letra, los estructura de directorios concuerda, MySQL tiene 
+	creadas sus tablas en la forma correcta, el motor de Tomcat inicio sin problemas y la gravedad 
+	de la Luna no afecta nuestro disco ri´gido, podremos seguir con el siguiente paso
+9.	En Internet Explorer o Mozilla o Opera o el navegador que mas te guste, copiar lo siguiente 
+	http://localhost:8080/encuesta/servlets/ServletEncuesta.html
+10.	Si todo sale bien, tendri´as que poder realizar la encuesta, y se tendri´an que grabar los resultados 
+	en la base de datos.
+11.	Cualquier duda , manden un mail.
+

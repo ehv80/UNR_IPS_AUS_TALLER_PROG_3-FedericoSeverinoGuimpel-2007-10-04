@@ -1,0 +1,117 @@
+<!DOCTYPE web-app PUBLIC 
+   "-//Sun Microsystems, Inc.//DTD Web Application 2.2//EN" 
+   "http://java.sun.com/j2ee/dtds/web-app_2_2.dtd">
+
+<web-app>
+
+   <!-- Descripcion general de su aplicacion Web -->
+   <display-name>
+      Ejemplos del capitulo sobre JSP y Servlets de Como programar en Java
+   </display-name>
+
+   <description>
+      Esta es la aplicacion Web en la que
+      demostramos nuestros ejemplos de JSP y Servlets.
+   </description>
+
+   <!-- Definiciones de Servlets -->
+   <servlet>
+      <servlet-name>bienvenida1</servlet-name>
+
+      <description>
+         Un servlet simple que maneja una peticion get de HTTP.
+      </description>
+
+      <servlet-class>
+         ServletDeBienvenida
+      </servlet-class>
+   </servlet>
+
+   <servlet>
+      <servlet-name>bienvenida2</servlet-name>
+
+      <description>
+         Un servlet simple que maneja una peticion get de HTTP.
+      </description>
+
+      <servlet-class>
+         ServletDeBienvenida2
+      </servlet-class>
+   </servlet>
+
+   <servlet>
+      <servlet-name>bienvenida3</servlet-name>
+
+      <description>
+         Un servlet simple que maneja una peticion post de HTTP.
+      </description>
+
+      <servlet-class>
+        ServletDeBienvenida3
+      </servlet-class>
+   </servlet>
+
+   <servlet>
+      <servlet-name>redireccion</servlet-name>
+
+      <description>
+         Un servlet que redirecciona hacia otro URL.
+      </description>
+
+      <servlet-class>
+         ServletRedireccion
+      </servlet-class>
+   </servlet>
+
+   <servlet>
+      <servlet-name>encuesta</servlet-name>
+
+      <description>
+         Un servlet de encuesta.
+      </description>
+
+      <servlet-class>
+         servEncuesta
+      </servlet-class>
+
+      <init-param>
+         <param-name>ubicacionBaseDeDatos</param-name>
+         <param-value>C:\Archivos de programa\MySQL\MySQL Server 5.0</param-value>
+      </init-param>
+      <init-param>
+         <param-name>controladorBaseDeDatos</param-name>
+         <param-value>mysql-connector-java-5.0.3-bin.jar</param-value>
+      </init-param>
+      <init-param>
+         <param-name>nombreBaseDeDatos</param-name>
+         <param-value>jdbc:mysql:servlet</param-value>
+      </init-param>
+   </servlet>
+
+   <!-- Asociaciones de Servlets -->
+   <servlet-mapping>
+      <servlet-name>bienvenida1</servlet-name>
+      <url-pattern>/bienvenida1</url-pattern>
+   </servlet-mapping>
+
+   <servlet-mapping>
+      <servlet-name>bienvenida2</servlet-name>
+      <url-pattern>/bienvenida2</url-pattern>
+   </servlet-mapping>
+
+   <servlet-mapping>
+      <servlet-name>bienvenida3</servlet-name>
+      <url-pattern>/bienvenida3</url-pattern>
+   </servlet-mapping>
+
+   <servlet-mapping>
+      <servlet-name>redireccion</servlet-name>
+      <url-pattern>/redireccion</url-pattern>
+   </servlet-mapping>
+
+   <servlet-mapping>
+      <servlet-name>encuesta</servlet-name>
+      <url-pattern>/encuesta</url-pattern>
+   </servlet-mapping>
+
+</web-app>

@@ -1,0 +1,4 @@
+4/10/2007
+ - Este es un ejemplo de cómo utilizar un servlet con Tomcat
+ para acceder a un base de datos en MySQL.
+(Arnesi, Martín)
